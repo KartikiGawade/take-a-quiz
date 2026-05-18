@@ -1,78 +1,99 @@
-*, *::before, *::after {
-    box-sizing: border-box ;
-    font-family: Gotham Rounded;
-}
-
-
-
 body {
-    background-color: rgb(253, 250, 250);
-    padding: 1000;
-    margin:1000;
-    width: 100vw;
+    font-family: Arial, sans-serif;
+    background: #5d5dbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(249, 249, 249);
-}
-
-body.correct {
-    background-color: rgb(48, 180, 48);
-}
-
-body.wrong {
-    background-color: rgb(203, 38, 38);
-}
-
-.container {
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
-}
-
-.btn-grid {
-    display: grid;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.btn {
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: black;
-}
-
-.btn:hover {
-    color: black;
-}
-
-.btn.correct {
-    background-color: green;
-    color: black;
-}
-
-.btn.wrong {
-    background-color: red;
-    color: black;
-}
-
-.start-btn, .next-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .hide {
     display: none;
+}
+
+#username {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.wrong {
+    background-color: #f44336;
+    color: white;
+}
+
+.timer-container {
+    margin-top: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+#progress {
+    height: 100%;
+    width: 100%;
+    background: #4CAF50;
+    transition: width 1s linear;
+}
+
+#score,
+#highscore {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#start-btn,
+#endBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+#start-btn:hover,
+#endBtn:hover {
+    background: #392e86;
 }

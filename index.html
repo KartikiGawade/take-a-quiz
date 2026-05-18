@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href ="style.css" rel="stylesheet">
-    <script defer src = "script.js"></script>
-    <title>Take a Quiz *_*</title>
+    <title>Take a Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class = "container">
-    <div id ="question-container" class = "hide">
-    <div id = "question"> Question </div>
-    <div id = "answer-buttons" class = "btn-grid"></div>
+    <div class="quiz-container">
+        <h1>Take a Quiz</h1>
+
+        <div id="start-screen">
+            <input type="text" id="username" placeholder="enter your name">
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="hide">
+            <div id="question"></div>
+            <div id="options"></div>
+
+
+            <div class="timer-container">
+                <div id="timer">Time left: 20s</div>
+                <div class="progress-bar">
+                    <div id="progress"></div>
+
+                </div>
+            </div>
+
+            <div id="score"></div>
+            <div id="highscore"></div>
+            <button id="endBtn">End Quiz</button>
+        </div>
     </div>
-    <div class = "controls">
-    <button id="start-btn" class="start-btn btn"> Start </button>
-    <button id="next-btn" class="next-btn btn hide" > Next </button>
-    </div>
-    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
