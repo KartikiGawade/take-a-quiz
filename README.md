@@ -5,8 +5,7 @@ Users can answer timed questions, get instant feedback, track their score, and v
 
  ✨ Features
 - ⏱️ Live Timer – Countdown for each question to keep the quiz engaging  
-- ✅ Instant Feedback – Immediate response for correct/wrong answers  
-- 📊 Score Tracking – Dynamic score updates during the quiz  
+- ✅ Instant Feedback – Immediate response for correct/wrong answers   
 - 🏆 High Score Saving – Stores best score using local storage  
 - 🎨 Responsive UI – Clean design for smooth user experience  
 
