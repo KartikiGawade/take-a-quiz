@@ -42,7 +42,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 1s;
 }
 
 .correct {
@@ -82,7 +82,7 @@ body {
 }
 
 #start-btn,
-#endBtn {
+#end-btn {
     margin-top: 10px;
     padding: 10px 20px;
     background: #ff9800;
@@ -96,4 +96,18 @@ body {
 #start-btn:hover,
 #endBtn:hover {
     background: #392e86;
+}
+
+#restart-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restart-btn:hover {
+    background: #1976d2;
 }

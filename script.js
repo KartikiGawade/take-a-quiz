@@ -55,6 +55,7 @@ const questions = [
 let currentQuestionIndex = 0;
 let score = 0;
 let timeLeft = 20;
+const TOTAL_TIME = 20;
 let timer;
 let userName = "";
 
@@ -66,12 +67,20 @@ document.getElementById("start-btn").addEventListener("click", () => {
     }
     document.getElementById("start-screen").classList.add("hide");
     document.getElementById("quiz-screen").classList.remove("hide");
+    document.getElementById("end-btn").style.display = "inline-block";
+    document.querySelector(".progress-bar").style.display = "block";
     startQuiz();
+});
+
+document.getElementById("end-btn").addEventListener("click", () => {
+    stopTimer();
+    endQuiz();
 });
 
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+
     showQuestion();
 }
 
@@ -109,7 +118,7 @@ function nextQuestion() {
 }
 
 function startTimer() {
-    timeLeft = 20;
+    timeLeft = TOTAL_TIME;
     updateTimer();
     timer = setInterval(() => {
         timeLeft--;
@@ -121,11 +130,6 @@ function startTimer() {
     }, 1000);
 }
 
-document.getElementById("endBtn").onclick = () => {
-    stopTimer();
-    endQuiz();
-};
-
 function stopTimer() {
     clearInterval(timer);
 }
@@ -133,7 +137,7 @@ function stopTimer() {
 function updateTimer() {
     document.getElementById("timer").textContent = `Time left: ${timeLeft}s`;
     const progress = document.getElementById("progress");
-    progress.style.width = `${(timeLeft / 20) * 100}%`;
+    progress.style.width = `${(timeLeft / TOTAL_TIME) * 100}%`;
 }
 
 function endQuiz() {
@@ -150,7 +154,18 @@ function endQuiz() {
         highScore = score;
     }
     document.getElementById("highscore").textContent = `High Score: ${highScore}`;
+
+    document.getElementById("end-btn").style.display = "none";
+    document.querySelector(".progress-bar").style.display = "none";
+    document.getElementById("restart-btn").classList.remove("hide");
 }
 
-window.onload = startQuiz;
+document.getElementById("restart-btn").addEventListener("click", () => {
+    document.getElementById("restart-btn").classList.add("hide");
+    document.getElementById("end-btn").style.display = "inline-block";
+    document.querySelector(".progress-bar").style.display = "";
+    document.getElementById("start-screen").classList.add("hide");
+    document.getElementById("quiz-screen").classList.remove("hide");
+    startQuiz();
+});
 
